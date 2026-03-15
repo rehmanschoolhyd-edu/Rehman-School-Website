@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rehman School of Excellence | Official Website</title>
+<meta name="description" content="Rehman School of Excellence Hyderabad – Quality education with modern learning.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+body{font-family:Segoe UI,Arial;background:#f6f8fc}
+.navbar{box-shadow:0 3px 15px rgba(0,0,0,0.1)}
+.hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b');background-size:cover;background-position:center;color:white;text-align:center;padding:150px 20px}
+.hero h1{font-size:50px;font-weight:700}
+.section{padding:70px 20px}
+.title{font-weight:700;margin-bottom:30px}
+.card{border:none;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,0.08)}
+.gallery img{border-radius:12px;transition:.4s}
+.gallery img:hover{transform:scale(1.05)}
+.notice{background:white;padding:20px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.07)}
+.footer{background:#111;color:white;padding:35px;text-align:center}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;font-size:26px;padding:14px 18px;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.admin-panel{background:#fff;padding:25px;border-radius:12px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+</style></head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Rehman School</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#notice">Notice</a></li>
+<li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
+<li class="nav-item"><a class="nav-link" href="#admin">Admin</a></li>
+</ul>
+</div>
+</div>
+</nav><section class="hero" id="home">
+<h1>Rehman School of Excellence</h1>
+<p>Quality Education • Bright Future</p>
+<a class="btn btn-warning btn-lg mt-3" href="#admission">Apply for Admission</a>
+</section><section class="section" id="about">
+<div class="container text-center">
+<h2 class="title">About Our School</h2>
+<p>Rehman School of Excellence provides quality education with modern teaching techniques and strong moral values.</p>
+</div>
+</section><section class="section bg-light" id="classes">
+<div class="container">
+<h2 class="title text-center">Our Classes</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-4 text-center"><h4>Play Group</h4><p>Fun activity based learning.</p></div></div>
+<div class="col-md-4"><div class="card p-4 text-center"><h4>Kindergarten</h4><p>Creative early education.</p></div></div>
+<div class="col-md-4"><div class="card p-4 text-center"><h4>Primary</h4><p>Strong academic foundation.</p></div></div>
+</div>
+</div>
+</section><section class="section gallery" id="gallery">
+<div class="container">
+<h2 class="title text-center">School Gallery</h2>
+<div class="row g-4" id="galleryContainer">
+<div class="col-md-4"><img class="img-fluid" src="https://images.unsplash.com/photo-1588072432836-e10032774350"></div>
+<div class="col-md-4"><img class="img-fluid" src="https://images.unsplash.com/photo-1509062522246-3755977927d7"></div>
+<div class="col-md-4"><img class="img-fluid" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"></div>
+</div>
+</div>
+</section><section class="section" id="notice">
+<div class="container">
+<h2 class="title text-center">School Notice Board</h2>
+<div class="row g-4" id="noticeBoard"></div>
+</div>
+</section><section class="section bg-light" id="admission">
+<div class="container">
+<h2 class="title text-center">Online Admission Form</h2>
+<div class="row justify-content-center">
+<div class="col-md-7">
+<form name="admission" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="admission">
+<input class="form-control mb-3" name="student" placeholder="Student Name" required>
+<input class="form-control mb-3" name="parent" placeholder="Parent Name" required>
+<input class="form-control mb-3" name="phone" placeholder="Phone Number" required>
+<select class="form-control mb-3" name="class">
+<option>Play Group</option>
+<option>Kindergarten</option>
+<option>Primary</option>
+</select>
+<textarea class="form-control mb-3" name="message" placeholder="Message"></textarea>
+<button class="btn btn-primary w-100">Submit Admission</button>
+</form>
+</div>
+</div>
+</div>
+</section><section class="section" id="admin">
+<div class="container">
+<h2 class="title text-center">Admin Panel</h2>
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="admin-panel">
+<input id="noticeInput" class="form-control mb-3" placeholder="Write new notice">
+<button class="btn btn-success w-100" onclick="addNotice()">Add Notice</button>
+</div>
+</div>
+</div>
+</div>
+</section><div class="footer">
+<p>© 2026 Rehman School of Excellence</p>
+</div><a class="whatsapp" href="https://wa.me/923003444551"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+let notices = JSON.parse(localStorage.getItem('schoolNotices')) || [
+"Admissions are open for Playgroup to Primary.",
+"Ramadan school timings start at 8:10 AM"
+];
+
+function renderNotices(){
+let board = document.getElementById("noticeBoard");
+board.innerHTML="";
+notices.forEach(n=>{
+board.innerHTML += `<div class='col-md-4'><div class='notice'><p>${n}</p></div></div>`;
+});
+}
+
+function addNotice(){
+let text = document.getElementById("noticeInput").value;
+if(text.trim()==="") return;
+notices.push(text);
+localStorage.setItem('schoolNotices',JSON.stringify(notices));
+renderNotices();
+document.getElementById("noticeInput").value="";
+}
+
+renderNotices();
+</script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script></body>
+</html>
